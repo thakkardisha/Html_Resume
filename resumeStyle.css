@@ -1,0 +1,237 @@
+/* Global Styles */
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at right, #f58ad8d8, #85a2ffef); /* Centered gradient */
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  h2{
+    font-family: Century Gothic;
+    font-size: 22px;
+  }
+  
+  /* Container and Layout */
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative; /* Needed for shapes */
+  }
+  
+  header,
+  main,
+  footer {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .gradient-line {
+    margin-top: 10px;
+    position: relative; /* Needed for animation */
+    width: 100%; /* Adjust width as needed */
+    height: 0.5px; /* Adjust height as needed */
+    background: linear-gradient(to right, rgb(168, 144, 246), rgb(199, 185, 255)); /* Your gradient colors */
+    opacity: 0; /* Initially hide the line */
+    margin-bottom: 25px;
+    animation: fill-line 1s ease forwards; /* Animation properties */
+  }
+
+@keyframes fill-line {
+from {
+  opacity: 0;
+  transform: translateX(-100%); /* Start from left outside */
+}
+to {
+  opacity: 1;
+  transform: translateX(0); /* Animate to full width */
+}
+}
+  
+  /* Header */
+  
+  header {
+    /* background-color: #f5f5f5; */
+    text-align: center;
+    display: block; /* Center elements horizontally */
+    justify-content: center; /* Distribute content evenly */
+    align-items: center; /* Align content vertically */
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-right: 20px; /* Add space between name and photo */
+  }
+  p {
+    font-family: Calibri ;
+    font-size: 15px;
+  }
+  nav {
+    text-align: center;
+    margin-top: 0; /* Remove margin-top to stack below name in one line */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin: 15px;
+  }
+  
+  nav li a {
+    position: relative; /* For hover effects */
+  }
+  
+  nav li a:after {
+    content: ""; /* Add an after pseudo-element for underline */
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #007bff; /* Underline color */
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(2px); /* Adjust underline position */
+  }
+  
+  nav li a:hover:after {
+    width: 100%; /* Underline on hover */
+  }
+  
+  
+  .profile-img {
+    flex: 0 0 100px; /* Adjust photo size */
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+  }
+  
+  /* Profile Section */
+  
+  .profile {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 0 auto;
+    width: fit-content;
+    /* background: linear-gradient(to right, #97657f, #a27474); */
+  }
+  
+  .profile-content {
+    flex: 1; /* Remove if using flexbox for profile layout */
+  }
+  
+  /* Footer */
+  
+  footer {
+    text-align: center;
+    /* background-color: #f5f5f5; */
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+  }
+  
+  .social-links a,p {
+    margin: 0 5px;
+    color: #333;
+  }
+  
+  .social-links a:hover {
+    color: #007bff;
+  }
+
+  /* EDUCATION PAGE */
+
+  .education {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 95%;
+  }
+  .education h3{
+    font-family: Calibri ;
+  }
+  .education-content {
+    flex: 1; 
+  }
+
+  /* SKILLS PAGE */
+
+  .skills {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 95%;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse; /* Removes borders between cells */
+  }
+  
+  th,
+  td {
+    font-family: Calibri ;
+    font-size: 15px;
+    padding: 5px;
+    /* border: 1px solid #ddd; */
+    text-align: left; /* Align */
+    vertical-align: top;
+  }
+
+
+  /* PROJECTS AND LEARNINGS PAGE */
+
+  .projects {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .projects h2 {
+    font-family: Century Gothic;
+  }
+
+  .project-section,
+  .learnings-section {
+    margin-bottom: 15px;
+  }
+
+  .project-section h3,
+  .learnings-section h3 {
+    font-family: Calibri;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+
+  .project-section ul,
+  .learnings-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .project-section ul li,
+  .learnings-section ul li {
+    font-family: Calibri ;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
